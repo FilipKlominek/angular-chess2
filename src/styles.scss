@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap";
+
+$bg-color: #ffffff;
+
+.dark {
+  $bg-color: #444455;
+}
+
+$bg-dark: #444455;
+
+
+.square {
+  background-color: $bg-color;
+}
+
+.row:nth-child(odd) .square:nth-child(odd), .row:nth-child(even) .square:nth-child(even) {
+  background-color: darken($bg-color, 10%);
+}
+
+
+.dark {
+  .square {
+    background-color: $bg-dark;
+  }
+
+  color: white;
+
+  .row:nth-child(odd) .square:nth-child(odd), .row:nth-child(even) .square:nth-child(even) {
+    background-color: darken($bg-dark, 10%) !important;
+  }
+}
